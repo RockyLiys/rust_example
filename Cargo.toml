@@ -1,0 +1,29 @@
+[package]
+name = "rt"
+version = "0.1.0"
+edition = "2021"
+
+[source.crates-io]
+replace-with = 'rsproxy'
+
+[source.rsproxy]
+registry = "https://rsproxy.cn/crates.io-index"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num = "0.4.0"
+utf8_slice = "1.0.0"
+twox-hash = "1.6.3"
+reqwest = "0.11.20"
+serde = "1.0.193"
+serde_json = "1.0.108"
+rayon = "1.8.0"  # 是一个 "Rust的数据并行库"，简单地说，给它数据，它就知道如何把它分割成独立的块，让你所有的CPU核心工作
+slog = "2.7.0" # 是一个非常完整的Rust日志套件。它是一个核心，后面有很多插件，比如终端输出的term，JSON输出的json等等
+hyper = "1.0.1" # hyper 是 Rust 实现的 HTTP 库。hyper 同时支持 HTTP/1 和 HTTP/2，并且同时提供 client 与 server API
+ # hyper 性能好，偏底层，而且面向 async 设计，应用广泛，已成为 Rust 网络程序生态的重要基石之一。 知名的 HTTP client reqwest,
+ # HTTP server warp 和 axum, Rust 的 gRPC 实现 tonic 等，都使用了 hyper
+base64 = "0.21.5"
+#volo-cli = "0.8.3"
+chrono = "0.4.31"
+#tauri = "1.5.4"
