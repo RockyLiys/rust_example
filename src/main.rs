@@ -1,6 +1,7 @@
 mod basic_type;
 mod http_request;
 mod advanced_level;
+mod leetcode;
 
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
@@ -449,4 +450,5 @@ fn main() {
 
     // basic_type::example::test_fn_struct_enum_trait();
     advanced_level::example::test_advanced_level();
+    // leetcode::example::test_leetcode();
 }

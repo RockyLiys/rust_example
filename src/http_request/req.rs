@@ -66,7 +66,7 @@ struct Complex{
 
 impl Complex{
     fn new(real: i32) -> Self {
-        return Complex{real}
+        Complex{real}
     }
 }
 
@@ -102,6 +102,7 @@ impl AddSubMul<i32> for ComplexMul {
     }
 }
 
+#[allow(unused)]
 fn trait_test(){
     let mut c = Complex::new(100);
     println!("add:{}", c.add(10));
@@ -114,6 +115,7 @@ fn trait_test(){
     println!("complexMul obj: {:?}", c1);
 
 }
+#[allow(unused)]
 pub fn req_test() {
     req_http();
     // empty_struct_test();
